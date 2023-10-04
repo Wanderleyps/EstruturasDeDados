@@ -16,7 +16,7 @@ class ListaEncadeada:
             no = no.prox
         return qtd
 
-    def insere_inicio(self, valor):
+    def inserir_inicio(self, valor):
         novo_no = No(valor)
         novo_no.prox = self.__inicio
         self.__inicio = novo_no
@@ -38,7 +38,7 @@ class ListaEncadeada:
         self.__inicio = self.__inicio.prox
         return valor
 
-    def remove_final(self):
+    def remover_final(self):
         if (self.__inicio == None):
             return False
 
@@ -57,7 +57,7 @@ class ListaEncadeada:
 
         return valor
 
-    def remove_valor(self, valor):
+    def remover_valor(self, valor):
         if (self.__inicio == None):
             return None
 
@@ -75,7 +75,7 @@ class ListaEncadeada:
         else:
             ant.prox = atual.prox
 
-        return valor
+        return atual.valor
 
     def imprimir(self):
         qtd = 0
