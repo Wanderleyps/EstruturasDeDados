@@ -30,7 +30,7 @@ class ListaDuplaEncadeada:
             novo_no = No(valor)
             novo_no.prox = None
             novo_no.ant = self.__fim
-            self.__final = novo_no
+            self.__fim = novo_no
         self.__qtd += 1
 
     def remover_inicio(self):
@@ -39,7 +39,7 @@ class ListaDuplaEncadeada:
         valor = self.__inicio.valor
         self.__inicio = self.__inicio.prox
         if (self.__inicio == None):
-            self.__final = None
+            self.__fim = None
         else:
             self.__inicio.ant = None
         self.__qtd -= 1
@@ -48,10 +48,10 @@ class ListaDuplaEncadeada:
     def remover_final(self):
         if (self.is_vazia()):
             return None
-        valor = self.__final.valor
-        if (self.__inicio == self.__final):
+        valor = self.__fim.valor
+        if (self.__inicio == self.__fim):
             self.__inicio = None
-            self.__final = None
+            self.__fim = None
         else:
             self.__fim.ant.prox = None
             self.__fim = self.__fim.ant
