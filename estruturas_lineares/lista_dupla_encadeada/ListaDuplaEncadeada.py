@@ -81,7 +81,7 @@ class ListaDuplaEncadeada:
         qtd = 0
         atual = self.__inicio
         while (atual != None):
-            print(atual.valor, end=' -> ')
+            print(atual.valor, end=' <-> ')
             qtd = qtd + 1
             atual = atual.prox
         print("None")
