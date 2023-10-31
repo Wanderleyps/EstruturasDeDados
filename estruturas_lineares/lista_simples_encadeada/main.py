@@ -6,8 +6,8 @@ lista = ListaEncadeada()
 
 op = None
 
-while(op != 0):
-    print("\nMenu:")
+while (op != 0):
+    print("\nMenu lista simples:")
     print("1. Inserir Inicio")
     print("2. Inserir Final")
     print("3. Remover Inicio")
@@ -17,7 +17,7 @@ while(op != 0):
     print("0. Sair")
 
     escolha = input("Escolha uma opção: ")
-        
+
     if escolha == "1":
         valor = input("Digite o valor: ")
         lista.insere_inicio(valor)
@@ -25,7 +25,7 @@ while(op != 0):
         valor = input("Digite o valor: ")
         lista.inserir_final(valor)
     elif escolha == "3":
-        print('Valor removido: ', lista.remover_inicio())        
+        print('Valor removido: ', lista.remover_inicio())
     elif escolha == "4":
         print('Valor removido: ', lista.remove_final())
     elif escolha == "5":

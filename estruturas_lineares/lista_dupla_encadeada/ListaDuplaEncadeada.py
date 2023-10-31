@@ -57,25 +57,6 @@ class ListaDuplaEncadeada:
         self.__qtd -= 1
         return valor
 
-    def remover_valor(self, valor):
-        if (self.is_vazia()):
-            return None
-        atual = self.__inicio
-        while (atual != None and atual.valor != valor):
-            atual = atual.prox
-
-        if (atual == None):
-            return None
-        if (atual == self.__inicio):
-            self.remover_inicio()
-        elif (atual.prox == None):
-            self.remover_final()
-        else:
-            atual.ant.prox = atual.prox
-            atual.prox.ant = atual.ant
-        self.__qtd -= 1
-        return atual.valor
-
     def imprimir(self):
         qtd = 0
         atual = self.__inicio

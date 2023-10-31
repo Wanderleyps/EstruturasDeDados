@@ -7,7 +7,7 @@ lista = ListaDuplaEncadeada()
 op = None
 
 while (op != 0):
-    print("\nMenu:")
+    print("\nMenu Lista dupla:")
     print("1. Inserir Inicio")
     print("2. Inserir Final")
     print("3. Remover Inicio")
