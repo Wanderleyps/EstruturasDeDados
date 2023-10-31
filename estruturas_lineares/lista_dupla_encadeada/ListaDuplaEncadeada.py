@@ -28,7 +28,6 @@ class ListaDuplaEncadeada:
             self.inserir_inicio(valor)
         else:
             novo_no = No(valor)
-            novo_no.prox = None
             novo_no.ant = self.__fim
             self.__fim = novo_no
         self.__qtd += 1
@@ -63,8 +62,8 @@ class ListaDuplaEncadeada:
             return None
         atual = self.__inicio
         while (atual != None and atual.valor != valor):
-            ant = atual
             atual = atual.prox
+
         if (atual == None):
             return None
         if (atual == self.__inicio):
