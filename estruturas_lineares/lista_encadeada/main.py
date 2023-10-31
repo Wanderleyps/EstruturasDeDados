@@ -4,57 +4,37 @@ from No import No
 # Criando uma instância da ListaEncadeada
 lista = ListaEncadeada()
 
-# Verificando se a lista está vazia (deve retornar True)
-print("Lista vazia:", lista.is_vazia())
+op = None
 
-# Inserindo elementos no início da lista
-lista.inserir_inicio(10)
-lista.inserir_inicio(20)
-lista.inserir_inicio(30)
+while(op != 0):
+    print("\nMenu:")
+    print("1. Inserir Inicio")
+    print("2. Inserir Final")
+    print("3. Remover Inicio")
+    print("4. Remover Final")
+    print("5. Remover Por Valor")
+    print("6. Ver Lista")
+    print("0. Sair")
 
-# Verificando o tamanho da lista (deve retornar 3)
-print("Tamanho da lista:", lista.tamanho())
-
-# Inserindo elementos no final da lista
-lista.inserir_final(40)
-lista.inserir_final(50)
-
-# Imprimindo a lista
-print("Lista após inserções iniciais:")
-lista.imprimir()
-
-# Removendo elementos do início da lista (deve remover 30, 20, 10)
-lista.remover_inicio()
-lista.remover_inicio()
-lista.remover_inicio()
-
-# Imprimindo a lista após remoções
-print("\nLista após remoção do início:")
-lista.imprimir()
-
-# Removendo elementos do final da lista (deve remover 50, 40)
-lista.remover_final()
-lista.remover_final()
-
-# Imprimindo a lista após remoção do final
-print("\nLista após remoção do final:")
-lista.imprimir()
-
-# Inserindo elementos para teste de remoção por valor
-lista.inserir_inicio(60)
-lista.inserir_inicio(70)
-lista.inserir_inicio(60)
-
-# Imprimindo a lista antes da remoção por valor
-print("\nLista antes da remoção por valor:")
-lista.imprimir()
-
-# Removendo elementos com valor 60 (deve remover ambos)
-lista.remover_valor(60)
-
-# Imprimindo a lista após remoção por valor
-print("\nLista após remoção por valor:")
-lista.imprimir()
-
-# Verificando se a lista está vazia após todas as operações (deve retornar False)
-print("\nLista vazia:", lista.is_vazia())
+    escolha = input("Escolha uma opção: ")
+        
+    if escolha == "1":
+        valor = input("Digite o valor: ")
+        lista.insere_inicio(valor)
+    elif escolha == "2":
+        valor = input("Digite o valor: ")
+        lista.inserir_final(valor)
+    elif escolha == "3":
+        print('Valor removido: ', lista.remover_inicio())        
+    elif escolha == "4":
+        print('Valor removido: ', lista.remove_final())
+    elif escolha == "5":
+        valor = input("Digite o valor: ")
+        print('Valor removido: ', lista.remove_valor(valor))
+    elif escolha == "6":
+        lista.imprimir()
+    elif escolha == "0":
+        print("Encerrando o programa...")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
